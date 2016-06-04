@@ -1,0 +1,89 @@
+﻿{
+
+    "application-client-id": "6ded6906-3086-4a9b-b9bc-948d7ea67aab",
+    "session-timeout-in-seconds": 6000,
+    "deal-cache-timeout-in-seconds": 10,
+
+    "email-settings": {
+        "from-address": "support@dealercell.com",
+        "from-name": "DealerCell"
+    },
+    "sms-settings": {
+        "from-address": "someone@dealercell.com",
+        "to-address-template": "{0}@pcsms.com.au",
+        "override-send": true,
+        "override-mobile-number": "0497230221"
+    },
+    "password-settings": {
+        "adjectives": "breakable truculent dangerous wandering frequent famous neat garrulous uncovered symptomatic rightful wiggly fresh real poised military kindhearted auspicious spiritual limping late certain ubiquitous sleepy curvy second-hand tired enchanting petite honorable curved cagey gifted unwritten aggressive sore macabre magenta burly necessary earsplitting spectacular unbiased imminent bored half roomy deserted adorable right erratic exciting encouraging curly naive fantastic ugliest agonizing adamant terrific tangy addicted impossible absent deafening nappy drab utopian obscene bright grateful sharp cowardly overjoyed concerned sad nostalgic tan hard ratty cloistered statuesque changeable quarrelsome peaceful abstracted acrid special testy dreary bitesized tacit false available keen discreet true giddy annoyed periodic",
+        "nouns": "dolls health requesting basketball secretary brother level blood anger quiver thought look rod rabbits value school addition cobweb library grandmother loss produce jewel river pest tooth harmony crayon vest shame cabbage box cherry government elbow cellar sofa ghost smell unit shake houses seat view way railway kittens ice son thunder comparison word man hour desk mind curve lumber decision industry sound wool battle chance show picture jar cushion channel carriage horn sleet street committee bucket pear ball sneeze door vegetable wish pencil cannon detail dog crack power tank pocket drawer eggnog grape sail cup bike passenger vacation queen neck",
+        "verbs": "terrify bury crack mend heal bang long please handle slow ask invent guard wipe return spill happen itch hurry land sin lighten educate unlock tap cheer subtract taste knit suspect bow form cause tip share bomb soak mourn vanish bless mug slip warm chew watch shrug time wait bounce hug pick refuse snore trap grin bruise dream hope damage belong measure appear spark notice nest paint wonder guess harm excuse level repair thaw perform mate sprout want tease marry boil provide nod follow wrap whistle heat rule prefer occur stretch spray impress question remind encourage wobble drag curl suppose rub",
+        "digits": "0123456789",
+        "symbols": "!@#$%?"
+    },
+    "console-settings": {
+        "show-ipad": true,
+        "override-console-log": false
+    },
+    "login-settings": {
+        "max-failed-attempts": 5,
+        "lockout-time": 5
+    },
+
+    "integration-hub": 
+    {
+        "template-cache-timeout-in-minutes": 10,
+        "templates": [
+            {
+                "title": "ABC FInance",
+                "key": "abcfinance",
+                "path": "http://abcfinance.augisoft.com.au/",
+                "type": "dealercell.hub.templates.abcfinance",
+                "resource": "dealercell.hub.templates.abcfinance.js",
+                "sources": [ "pentana-eranet", "augipro" ],
+                "enabled": true
+            },
+            {
+                "title": "AugiPro",
+                "key": "augipro",
+                "path": "http://demo.augisoft.com.au/",
+                "type": "dealercell.hub.templates.augipro",
+                "resource": "dealercell.hub.templates.augipro.js",
+                "sources": [ "pentana-eranet" ],
+                "enabled": true
+
+            },
+            {
+                "title": "Allianz",
+                "key": "allianz",
+                "path": "https://www.einsure.com.au/safire/web/uw-allianz/motor-quote/-/sqt/new/",
+                "type": "dealercell.hub.templates.allianz",
+                "resource": "dealercell.hub.templates.allianz.js",
+                "sources": [ "dealercell", "augipro" ],
+                "enabled": true
+
+            },
+            {
+                "title": "DEALERcell",
+                "key": "dealercell",
+                "path": "http://localhost:25714/",
+                "type": "dealercell.hub.templates.dealercell",
+                "resource": "dealercell.hub.templates.dealercell.js",
+                "sources": [ "pentana-eranet" ],
+                "enabled": true
+
+            },
+            {
+                "title": "Pentana ERAnet",
+                "key": "pentana-eranet",
+                "path": "file:///C:/Projects/Git/DealerCell/DealerCell.Hub.Extension/Dealercell.Hub.Extension.Chrome/TestPage.html",
+                "type": "dealercell.hub.templates.pentana",
+                "resource": "dealercell.hub.templates.pentana.js",
+                "sources": [ ],
+                "enabled": true
+            }
+        ]
+    }
+
+}
+

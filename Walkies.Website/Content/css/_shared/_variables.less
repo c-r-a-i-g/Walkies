@@ -1,0 +1,170 @@
+﻿/* Theme folder */
+@theme-folder: '/content/_themes/_default';
+
+/* Main Colors*/
+@light-color: rgb( 235, 235, 235 );
+@dark-color: rgb( 38, 38, 38 );
+@accent-color: rgb(0, 145, 229);
+@content-background: rgb( 246, 246, 246 );
+@ajax-loader-color: rgb(255, 180, 1);//#6dfe6a;
+@dashboard-color: #747474;
+@pin-color: #F7E607;
+
+/* Bootstrap Colors*/
+@color-default: #aaaaaa;
+@color-primary: @ui-accent-color;
+@color-danger: rgb( 180, 0, 0 );
+@color-success: @ui-accent-color;
+@color-emphasis: rgb(255, 180, 1);
+
+/* Deal State Colors */
+@ds-color-new: rgb( 255, 90, 100);
+@ds-color-sold: rgb( 61, 226, 131);
+@ds-color-quote: rgb(99, 206, 255);
+@ds-color-offer-to-purchase: rgb( 238, 201, 87);
+
+/* Layout */
+@background-color-default: #036683; //#DBDFE0;
+@background-color-login: #20bbe9;
+@background-color-search: mix( @background-color-login, @background-color-default, 50% );
+@background-color-admin: #546d71;
+@background-color-full-screen: #f3f5f6;
+@background-gradient-color: white;
+@background-gradient-opacity-low: 0%;
+@background-gradient-opacity-high: 50%;
+
+
+@page-animation: cubic-bezier(0.7,0,0.3,1);
+@page-animation-speed-in: 237ms;
+@page-animation-speed-out: 300ms;
+@display-coach-tips: true;
+@top-margin: 30px;
+@scrollbar-margin: 12px;
+
+/* Login */
+@login-width: 332px;
+
+/* Navigation & Header */
+@header-height: 122px;
+@header-item-height: 72px;
+@navigation-color: fade( white, 85% );
+@navigation-color-selected: white;
+@navigation-background-color: transparent;//rgb( 64, 64, 64 );
+@navigation-background-color-hovered: fade( white, 7% );
+@navigation-background-color-selected: fade( white, 12% );
+@navigation-floating-border-color: @ui-accent-color;
+
+/* Sidebar */
+@sidebar-width: 200px;
+@sidebar-animation-update-speed: 120ms;
+@sidebar-animation-close-speed: 120ms;
+@sidebar-animation: cubic-bezier(0.7,0,0.3,1);
+@sidebar-nav-item-height: 60px;
+
+/* Toolbar */
+@toolbar-button-background-color: rgba( 240, 240, 240, 0.3 );
+
+
+/* Status Bar */
+@status-bar-background-color: @navigation-background-color;
+@status-bar-color: @navigation-color;
+
+
+/* Ribbon */
+@ui-ribbon-height: 105px;
+@ui-primary-color: rgb( 231, 231, 231 );
+@ui-accent-color: #20bbe9; 
+@ui-accent-color-green: rgb(13, 163, 44);
+@ui-accent-color-orange: rgb(221, 130, 18);
+@ribbon-button-height: 79px;
+@ribbon-panel-footer-height: 24px;
+@ribbon-well-background-color: @ui-primary-color;
+@ribbon-well-box-shadow: inset 0 -60px 40px -20px fadeout(darken( @ui-primary-color,20% ), 50%), inset 0 20px 20px -10px fadeout(darken( @ui-primary-color,20% ), 50%);
+@ribbon-panel-background-color: lighten( @ui-primary-color, 5% );
+@ribbon-panel-footer-background-color: @ui-primary-color;
+@ribbon-panel-footer-color: desaturate( darken( @ui-primary-color, 30% ), 15% );
+@ribbon-border-color: darken( @ui-primary-color, 10% );
+@ribbon-button-color: desaturate( darken( @ui-primary-color, 40% ), 15% );
+@ribbon-button-color-disabled: desaturate( darken( @ui-primary-color, 15% ), 15% );
+@ribbon-button-hover-background-color: lighten( @ui-primary-color, 9% );
+@ribbon-button-selected-background-color: lighten( @ui-primary-color, 15% );
+
+
+/* Panels */
+@panel-gutter-width: 0;
+@panel-gutter-border-color: rgba( 0, 0, 0, 0.1 );
+@panel-border-radius: 2px;
+@panel-header-padding: 20px 20px 20px 20px;
+@panel-info-background-color: transparent; //rgba( 255, 255, 255, 0.05 );
+@panel-tool-header-text-size: 19px;
+@panel-tool-text-size: 13px;
+@panel-tool-wrapper-background: rgba( 255, 255, 255, 0.1 );
+@panel-tool-wrapper-border-radius: 1px;
+@panel-tool-wrapper-padding: 10px;
+
+/* Wells */
+@well-background-color: rgba( 0, 0, 0, 0.01 );
+@well-padding: 15px;
+@well-color: #747474;
+
+
+// Tables
+@table-border-color: #dddddd;
+
+
+// Tabs
+@tab-well-background-color: @content-background;
+@tab-well-color: @color-primary;
+@tab-hover-background-color: darken( @content-background, 4% );
+@tab-hover-color: @color-primary;
+@tab-active-background-color: lighten( @content-background, 4% );
+@tab-active-color: desaturate( @color-primary, 100% );
+@tab-border-color: rgba( 0, 0, 0, 0.2 );
+@tab-padding: 20px;
+
+
+/* Forms */
+@form-input-max-width: 320px;
+@form-control-background: rgb(245, 245, 245);
+@form-control-border-radius: 2px;
+@form-control-border-color: rgb( 159, 177, 179 );
+@form-control-label-color:rgb(126, 141, 143);
+
+/* Search */
+@search-color: #444;
+@search-animation-speed: 400ms;
+@search-border-color: darken( @background-color-search, 5% );
+@search-placeholder-color: rgba( 255, 255, 255, 0.8);
+@search-color: rgb( 251, 250, 255);
+@search-card-background: rgb( 251, 250, 255 );
+@search-card-time-background: rgb( 228, 238, 243 );
+@search-card-text-color: rgb( 100, 122, 130 );
+
+
+/* Full Screen Layout */
+@fs-footer-background: white;
+@fs-footer-height: 88px;
+
+
+/* Spreadsheet - Colors */
+@spreadsheet-background-image: "@{theme-folder}/images/background-login.jpg";
+@spreadhseet-background-color: white;
+@marquee-color: @accent-color;
+@marquee-color-readonly: #A7A7A7 ;
+@marquee-background-color-readonly: rgba( 0, 0, 0, 0.05 );
+@grid-color: transparent;// rgba( 0, 0, 0, 0.1 );
+@header-grid-color: rgba( 0, 0, 0, 0.2 );
+@cell-background: white;
+@cell-background-alt: @cell-background;
+@header-cell-background: lighten( @ui-primary-color, 5% );
+@header-cell-border-color: darken( @ui-primary-color, 10% );
+
+
+/* Spreadsheet - Fonts */
+@spreadsheet-font: 14px 'Arial', sans-serif;
+
+
+/* IPPs */
+@ipp-step-not-visited-color: @navigation-color;
+@ipp-step-visited-color: @background-color-default;
+@ipp-step-dot-size: 20px;

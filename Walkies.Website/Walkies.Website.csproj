@@ -44,14 +44,54 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.0.3.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.0.3\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NReco.PdfGenerator, Version=1.1.12.0, Culture=neutral, PublicKeyToken=231663d50a41b451, processorArchitecture=MSIL">
+      <HintPath>..\packages\NReco.PdfGenerator.1.1.12.0\lib\net20\NReco.PdfGenerator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PredicateExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PredicateExtensions.1.0.0\lib\PredicateExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.5840.25917, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.6\lib\net40\System.Linq.Dynamic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -112,9 +152,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -164,42 +201,185 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap\bootstrap.css" />
+    <Content Include="Content\css\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\css\components\bootstrap-daterangepicker.css" />
+    <Content Include="Content\css\components\bootstrap-select.min.css" />
+    <Content Include="Content\css\components\bootstrap-toggle.min.css" />
+    <Content Include="Content\css\components\bootstrap-treeview.min.css" />
+    <Content Include="Content\css\components\wijmo.spreadsheet\app.css" />
+    <Content Include="Content\css\components\wijmo.spreadsheet\cell-styles.css" />
+    <Content Include="Content\css\components\wijmo.spreadsheet\wijmo.min.css" />
+    <Content Include="Content\fonts\glyphicons-regular.svg" />
+    <Content Include="Content\_themes\_default\images\favicon.ico" />
+    <Content Include="Content\_themes\_default\theme.css">
+      <DependentUpon>theme.less</DependentUpon>
+    </Content>
+    <Content Include="Content\_themes\_default\theme.min.css">
+      <DependentUpon>theme.css</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\_references.js" />
+    <Content Include="Content\scripts\bootstrap.js" />
+    <Content Include="Content\scripts\bootstrap.min.js" />
+    <Content Include="Content\css\_shared\_mixins.less" />
+    <Content Include="Content\css\_shared\_site.less" />
+    <Content Include="Content\css\_shared\_variables.less" />
+    <Content Include="Content\css\bootstrap\mixins\alerts.less" />
+    <Content Include="Content\css\bootstrap\mixins\background-variant.less" />
+    <Content Include="Content\css\bootstrap\mixins\border-radius.less" />
+    <Content Include="Content\css\bootstrap\mixins\buttons.less" />
+    <Content Include="Content\css\bootstrap\mixins\center-block.less" />
+    <Content Include="Content\css\bootstrap\mixins\clearfix.less" />
+    <Content Include="Content\css\bootstrap\mixins\forms.less" />
+    <Content Include="Content\css\bootstrap\mixins\gradients.less" />
+    <Content Include="Content\css\bootstrap\mixins\grid-framework.less" />
+    <Content Include="Content\css\bootstrap\mixins\grid.less" />
+    <Content Include="Content\css\bootstrap\mixins\hide-text.less" />
+    <Content Include="Content\css\bootstrap\mixins\image.less" />
+    <Content Include="Content\css\bootstrap\mixins\labels.less" />
+    <Content Include="Content\css\bootstrap\mixins\list-group.less" />
+    <Content Include="Content\css\bootstrap\mixins\nav-divider.less" />
+    <Content Include="Content\css\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="Content\css\bootstrap\mixins\opacity.less" />
+    <Content Include="Content\css\bootstrap\mixins\pagination.less" />
+    <Content Include="Content\css\bootstrap\mixins\panels.less" />
+    <Content Include="Content\css\bootstrap\mixins\progress-bar.less" />
+    <Content Include="Content\css\bootstrap\mixins\reset-filter.less" />
+    <Content Include="Content\css\bootstrap\mixins\resize.less" />
+    <Content Include="Content\css\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="Content\css\bootstrap\mixins\size.less" />
+    <Content Include="Content\css\bootstrap\mixins\tab-focus.less" />
+    <Content Include="Content\css\bootstrap\mixins\table-row.less" />
+    <Content Include="Content\css\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="Content\css\bootstrap\mixins\text-overflow.less" />
+    <Content Include="Content\css\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="Content\css\bootstrap\alerts.less" />
+    <Content Include="Content\css\bootstrap\badges.less" />
+    <Content Include="Content\css\bootstrap\bootstrap.css.map" />
+    <Content Include="Content\css\bootstrap\bootstrap.less" />
+    <Content Include="Content\css\bootstrap\breadcrumbs.less" />
+    <Content Include="Content\css\bootstrap\button-groups.less" />
+    <Content Include="Content\css\bootstrap\buttons.less" />
+    <Content Include="Content\css\bootstrap\carousel.less" />
+    <Content Include="Content\css\bootstrap\close.less" />
+    <Content Include="Content\css\bootstrap\code.less" />
+    <Content Include="Content\css\bootstrap\component-animations.less" />
+    <Content Include="Content\css\bootstrap\dropdowns.less" />
+    <Content Include="Content\css\bootstrap\forms.less" />
+    <Content Include="Content\css\bootstrap\glyphicons.less" />
+    <Content Include="Content\css\bootstrap\grid.less" />
+    <Content Include="Content\css\bootstrap\input-groups.less" />
+    <Content Include="Content\css\bootstrap\jumbotron.less" />
+    <Content Include="Content\css\bootstrap\labels.less" />
+    <Content Include="Content\css\bootstrap\list-group.less" />
+    <Content Include="Content\css\bootstrap\media.less" />
+    <Content Include="Content\css\bootstrap\mixins.less" />
+    <Content Include="Content\css\bootstrap\modals.less" />
+    <Content Include="Content\css\bootstrap\navbar.less" />
+    <Content Include="Content\css\bootstrap\navs.less" />
+    <Content Include="Content\css\bootstrap\normalize.less" />
+    <Content Include="Content\css\bootstrap\pager.less" />
+    <Content Include="Content\css\bootstrap\pagination.less" />
+    <Content Include="Content\css\bootstrap\panels.less" />
+    <Content Include="Content\css\bootstrap\popovers.less" />
+    <Content Include="Content\css\bootstrap\print.less" />
+    <Content Include="Content\css\bootstrap\progress-bars.less" />
+    <Content Include="Content\css\bootstrap\responsive-embed.less" />
+    <Content Include="Content\css\bootstrap\responsive-utilities.less" />
+    <Content Include="Content\css\bootstrap\scaffolding.less" />
+    <Content Include="Content\css\bootstrap\tables.less" />
+    <Content Include="Content\css\bootstrap\theme.less" />
+    <Content Include="Content\css\bootstrap\thumbnails.less" />
+    <Content Include="Content\css\bootstrap\tooltip.less" />
+    <Content Include="Content\css\bootstrap\type.less" />
+    <Content Include="Content\css\bootstrap\utilities.less" />
+    <Content Include="Content\css\bootstrap\variables.less" />
+    <Content Include="Content\css\bootstrap\wells.less" />
+    <Content Include="Content\css\browsers\_safari.less" />
+    <Content Include="Content\css\mixins\_browser-rules.less" />
+    <Content Include="Content\css\mixins\_navigation.less" />
+    <Content Include="Content\css\_layout.base.less" />
+    <Content Include="Content\fonts\AugiFont-Regular.otf" />
+    <Content Include="Content\fonts\AugiFont-Regular.ttf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Black-Alt.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Black-Caps.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Black-Inline-Caps.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Black-Inline.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Black-Italic.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Black.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Bold-Alt.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Bold-Caps.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Bold-Italic.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Bold.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Light-Alt.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Light-Caps.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Light-Italic.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Light.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Thin-Alt.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Thin-Caps.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Thin-Italic.otf" />
+    <Content Include="Content\fonts\Fontfabric - Intro-Thin.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondBlack.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondBlackAlt.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondBlackCaps.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondBlackItalic.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondBold.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondBoldAlt.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondBoldCaps.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondBoldItalic.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondLight.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondLightAlt.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondLightCaps.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondLightItalic.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondRegular.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondRegularAlt.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondRegularCaps.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondRegularItalic.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondSemiBold.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondSemiBoldAlt.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondSemiBoldCaps.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondSemiBoldItalic.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondThin.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondThinAlt.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondThinCaps.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroCondThinItalic.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroRegular.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroRegularAlt.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroRegularCaps.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroRegularItalic.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroSemiBold.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroSemiBoldAlt.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroSemiBoldCaps.otf" />
+    <Content Include="Content\fonts\Fontfabric - IntroSemiBoldItalic.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\glyphicons-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-regular.woff2" />
+    <Content Include="compilerconfig.json" />
+    <Content Include="Content\css\_fonts.less" />
+    <None Include="Content\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Content\scripts\jquery-1.10.2.js" />
+    <Content Include="Content\scripts\jquery-1.10.2.min.js" />
+    <None Include="Content\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Content\scripts\jquery.validate.js" />
+    <Content Include="Content\scripts\jquery.validate.min.js" />
+    <Content Include="Content\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\scripts\modernizr-2.6.2.js" />
+    <Content Include="Content\scripts\respond.js" />
+    <Content Include="Content\scripts\respond.min.js" />
+    <Content Include="Content\scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -210,7 +390,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_Layouts\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -234,16 +414,40 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Content\_app-settings\debug.json" />
+    <Content Include="Content\_app-settings\integration.json" />
+    <Content Include="Content\_app-settings\release.json" />
+    <Content Include="Content\_app-settings\staging.json" />
+    <Content Include="Content\_themes\_default\theme.less" />
+    <Content Include="Content\_themes\_default\_variables.less" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Content\scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Walkies.Core\Walkies.Core.csproj">
+      <Project>{21aed624-cba2-47d6-ae91-261ac7b7b633}</Project>
+      <Name>Walkies.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Walkies.Database\Walkies.Database.csproj">
+      <Project>{40a05552-7439-4fdf-8923-6752151e3957}</Project>
+      <Name>Walkies.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Walkies.Framework\Walkies.Framework.csproj">
+      <Project>{554c2c02-efe2-431f-834b-434065da046b}</Project>
+      <Name>Walkies.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Walkies\Walkies.csproj">
+      <Project>{c1f37bac-c970-4a89-9faa-beca5d8388ac}</Project>
+      <Name>Walkies</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

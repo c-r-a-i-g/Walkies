@@ -30,17 +30,280 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.0.3.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.0.3\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NReco.PdfGenerator, Version=1.1.12.0, Culture=neutral, PublicKeyToken=231663d50a41b451, processorArchitecture=MSIL">
+      <HintPath>..\packages\NReco.PdfGenerator.1.1.12.0\lib\net20\NReco.PdfGenerator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Postal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=45719375b8b4d528, processorArchitecture=MSIL">
+      <HintPath>..\packages\Postal.Mvc4.1.2.0\lib\net40\Postal.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PredicateExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PredicateExtensions.1.0.0\lib\PredicateExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.3.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.3.0\lib\net40\RazorEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.5840.25917, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.6\lib\net40\System.Linq.Dynamic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.1.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include=".Shared\Name.cs" />
+    <Compile Include="Attributes\AuthoriseWithAttribute.cs" />
+    <Compile Include="Attributes\CurrencyAttribute.cs" />
+    <Compile Include="Attributes\CurrencyRangeAttribute.cs" />
+    <Compile Include="Attributes\PermissionAttribute.cs" />
+    <Compile Include="Attributes\RequireTrueAttribute.cs" />
+    <Compile Include="Attributes\WebsiteUsersAttribute.cs" />
+    <Compile Include="BaseClasses\DataManager.cs" />
+    <Compile Include="BaseClasses\DataManagerBase[TManager,TModel,TEntity,TKey].cs" />
+    <Compile Include="BaseClasses\DataManagerContextBase[TContext,TManager,TModel,TEntity,TKey].cs" />
+    <Compile Include="BaseClasses\DataPageModelBase[TManager,TModel,TEntity,TKey].cs" />
+    <Compile Include="BaseClasses\EmailModelBase.cs" />
+    <Compile Include="BaseClasses\ListedDataPageModelBase[TManager,TModel,TEntity,TKey].cs" />
+    <Compile Include="BaseClasses\ModalBase.cs" />
+    <Compile Include="BaseClasses\PageModelBase.cs" />
+    <Compile Include="BaseClasses\SmsModelBase.cs" />
+    <Compile Include="BaseClasses\UserEmailModelBase.cs" />
+    <Compile Include="BaseClasses\WebControllerBase.cs" />
+    <Compile Include="BaseClasses\WebViewPageBase[TModel].cs" />
+    <Compile Include="Caching\Cache.cs" />
+    <Compile Include="Caching\CacheBase[TManager,TModel,TEntity,TKey].cs" />
+    <Compile Include="Caching\CacheFindResult[TEntity].cs" />
+    <Compile Include="Caching\SlidingExpirationPolicy.cs" />
+    <Compile Include="Converters\JsonDateTimeConverter.cs" />
+    <Compile Include="Enumerations\CellAlignment.cs" />
+    <Compile Include="Enumerations\CreateApplicationUserResult.cs" />
+    <Compile Include="Enumerations\DataFormat.cs" />
+    <Compile Include="Enumerations\LookupType.cs" />
+    <Compile Include="Enumerations\NotificationType.cs" />
+    <Compile Include="Extensions\ApplicationUserManagerExtensions.cs" />
+    <Compile Include="Extensions\AssemblyExtensions.cs" />
+    <Compile Include="Filters\AuthorisationFilter.cs" />
+    <Compile Include="Filters\CookieFilter.cs" />
+    <Compile Include="Filters\PageEventLogFilter.cs" />
+    <Compile Include="Filters\RefreshFilter.cs" />
+    <Compile Include="Initialisation\AppStartup\ConfigureAuth.cs" />
+    <Compile Include="Initialisation\AppStartup\Startup.cs" />
+    <Compile Include="Initialisation\IAppStartup.cs" />
+    <Compile Include="Initialisation\IPostStartup.cs" />
+    <Compile Include="Initialisation\IPreStartup.cs" />
+    <Compile Include="Initialisation\PostInitialisationModule.cs" />
+    <Compile Include="Initialisation\PreInitialisationModule.cs" />
+    <Compile Include="Initialisation\PreStartup\ConfigureApplicationDatabase.cs" />
+    <Compile Include="Initialisation\Startup.cs" />
+    <Compile Include="Interfaces\IAuthoriser.cs" />
+    <Compile Include="Interfaces\ICacheExpiryHandler.cs" />
+    <Compile Include="Interfaces\IDataEntityEvents[TModel,TEntity].cs" />
+    <Compile Include="Interfaces\IDataManager[TModel,TEntity,TKey].cs" />
+    <Compile Include="Interfaces\IDataPageModel[TManager,TEntity,TKey].cs" />
+    <Compile Include="Interfaces\IEditorAttributes.cs" />
+    <Compile Include="Interfaces\IListedDataPageModel[TManager,TEntity].cs" />
+    <Compile Include="Interfaces\IModal.cs" />
+    <Compile Include="Interfaces\IPageModel.cs" />
+    <Compile Include="Interfaces\IPriceBeforeRegistration.cs" />
+    <Compile Include="Interfaces\ITotalBalancePayable.cs" />
+    <Compile Include="Managers\UserManager.cs" />
+    <Compile Include="Models\.Shared\EntityStatusModel.cs" />
+    <Compile Include="Models\.Shared\FormFooterModel.cs" />
+    <Compile Include="Models\.Shared\FormToolbarModel.cs" />
+    <Compile Include="Models\.Shared\ImageListItem.cs" />
+    <Compile Include="Models\.Shared\ImageListModel.cs" />
+    <Compile Include="Models\Admin\AdminHomepageModel.cs" />
+    <Compile Include="Models\Admin\UserModel.cs" />
+    <Compile Include="Models\Admin\UsersModel.cs" />
+    <Compile Include="Models\Emails\AccountResetEmailModel.cs" />
+    <Compile Include="Models\Emails\PasswordResetRequestEmailModel.cs" />
+    <Compile Include="Models\Emails\WelcomeEmailModel.cs" />
+    <Compile Include="Models\Home\AboutModel.cs" />
+    <Compile Include="Models\Home\SupportModel.cs" />
+    <Compile Include="Models\Modals\ChangePasswordModel.cs" />
+    <Compile Include="Models\Modals\ResetAccountModel.cs" />
+    <Compile Include="Models\Modals\SelectGeneralUserModel.cs" />
+    <Compile Include="Models\Modals\SessionTimeoutModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\Authorisation\ApplicationDbContext.cs" />
+    <Compile Include="Web\Authorisation\ApplicationOAuthProvider.cs" />
+    <Compile Include="Web\Authorisation\ApplicationSignInManager.cs" />
+    <Compile Include="Web\Authorisation\ApplicationUser.cs" />
+    <Compile Include="Web\Authorisation\ApplicationUserManager.cs" />
+    <Compile Include="Web\Authorisation\Controllers\AccountController.cs" />
+    <Compile Include="Web\Authorisation\Controllers\AccountController.Login.cs" />
+    <Compile Include="Web\Authorisation\DealerCellSecurityStampValidator.cs" />
+    <Compile Include="Web\Authorisation\Models\AcceptTermsAndChangePasswordPageModel.cs" />
+    <Compile Include="Web\Authorisation\Models\AccountBindingModels.cs" />
+    <Compile Include="Web\Authorisation\Models\AccountViewModels.cs" />
+    <Compile Include="Web\Authorisation\Models\ChangePasswordPageModel.cs" />
+    <Compile Include="Web\Authorisation\Models\ForgottenPasswordModel.cs" />
+    <Compile Include="Web\Authorisation\Models\LoginModel.cs" />
+    <Compile Include="Web\Authorisation\Models\ResetPasswordModel.cs" />
+    <Compile Include="Web\Authorisation\PasswordGenerator.cs" />
+    <Compile Include="Web\Authorisation\SaveUserResult.cs" />
+    <Compile Include="Web\Breadcrumbs\Breadcrumb.cs" />
+    <Compile Include="Web\Breadcrumbs\BreadcrumbManager.cs" />
+    <Compile Include="Web\Breadcrumbs\BreadcrumbType.cs" />
+    <Compile Include="Web\Cookies\DealerCellCookie.cs" />
+    <Compile Include="Web\DataTables\DataTablesColumn.cs" />
+    <Compile Include="Web\DataTables\DataTablesModelBinder.cs" />
+    <Compile Include="Web\DataTables\DataTablesOrder.cs" />
+    <Compile Include="Web\DataTables\DataTablesRequestModel.cs" />
+    <Compile Include="Web\DataTables\DataTablesResponseModel.cs" />
+    <Compile Include="Web\DataTables\DataTablesSearch.cs" />
+    <Compile Include="Web\DataTables\FilteredList[TEntity].cs" />
+    <Compile Include="Web\DataTables\ListedEntityOptionsModel.cs" />
+    <Compile Include="Web\DataTables\OrderByExpression[TEntity].cs" />
+    <Compile Include="Web\DataTables\TableModel.cs" />
+    <Compile Include="Web\DataTables\TableToolsModel.cs" />
+    <Compile Include="Web\HttpModules\SignalRFormsAuthenticationCleanerModule.cs" />
+    <Compile Include="Web\Notifications\Notification.cs" />
+    <Compile Include="Web\PdfGenerator\Orientation.cs" />
+    <Compile Include="Web\PdfGenerator\Pdf.cs" />
+    <Compile Include="Web\PdfGenerator\PdfFlags.cs" />
+    <Compile Include="Web\Session\SecureData.cs" />
+    <Compile Include="Web\Session\UserSession.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="LICENSE.md" />
+    <None Include="packages.config" />
+    <None Include="readme.md" />
+    <None Include="Views\Emails\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Walkies.Core\Walkies.Core.csproj">
+      <Project>{21aed624-cba2-47d6-ae91-261ac7b7b633}</Project>
+      <Name>Walkies.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Walkies.Database\Walkies.Database.csproj">
+      <Project>{40a05552-7439-4fdf-8923-6752151e3957}</Project>
+      <Name>Walkies.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Walkies\Walkies.csproj">
+      <Project>{c1f37bac-c970-4a89-9faa-beca5d8388ac}</Project>
+      <Name>Walkies</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Initialisation\PostStartup\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
