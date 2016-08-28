@@ -3,28 +3,54 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Walkies.Framework.Models.Home;
 
 namespace Walkies.Website.Controllers
 {
+
+    [RoutePrefix( "" )]
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        [Route( "" )]
+        public ActionResult Homepage()
         {
-            return View();
+            var model = new HomepageModel();
+            return View( model );
         }
 
+        [Route( "booking" )]
+        public ActionResult Booking()
+        {
+            var model = new BookingModel();
+            return View( model );
+        }
+
+        [Route( "about" )]
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            var model = new AboutModel();
+            return View( model );
         }
 
+        [Route( "testimonials" )]
+        public ActionResult Testimonials()
+        {
+            var model = new TestimonialsModel();
+            return View( model );
+        }
+
+        [Route( "services" )]
+        public ActionResult Services()
+        {
+            var model = new ServicesModel();
+            return View( model );
+        }
+
+        [Route( "contact" )]
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            var model = new ContactModel();
+            return View( model );
         }
     }
 }

@@ -8,24 +8,21 @@ namespace Walkies.Website
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles( BundleCollection bundles )
         {
-            bundles.Add( new ScriptBundle( "~/bundles/jquery" ).Include(
-                        "~/Content/scripts/jquery-{version}.js" ) );
+            bundles.Add( new ScriptBundle( "~/scripts/jquery" ).Include(
+                        "~/Content/scripts/jquery/jquery-{version}.js",
+                        "~/Content/scripts/jquery/jquery.validate*" ) );
 
-            bundles.Add( new ScriptBundle( "~/bundles/jqueryval" ).Include(
-                        "~/Content/scripts/jquery.validate*" ) );
+            bundles.Add( new ScriptBundle( "~/scripts/bootstrap" ).Include(
+                      "~/Content/scripts/modernizr/modernizr-*",
+                      "~/Content/scripts/bootstrap/bootstrap.js",
+                      "~/Content/scripts/bootstrap/respond.js" ) );
 
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-            bundles.Add( new ScriptBundle( "~/bundles/modernizr" ).Include(
-                        "~/Content/scripts/modernizr-*" ) );
-
-            bundles.Add( new ScriptBundle( "~/bundles/bootstrap" ).Include(
-                      "~/Content/scripts/bootstrap.js",
-                      "~/Content/scripts/respond.js" ) );
-
-            bundles.Add( new StyleBundle( "~/bundles/css" ).Include(
+            bundles.Add( new StyleBundle( "~/css" ).Include(
                       "~/Content/css/bootstrap/bootstrap.min.css",
                       "~/Content/_themes/_default/theme.min.css" ) );
+
+            bundles.Add( new ScriptBundle( "~/scripts/app" ).Include(
+                        "~/Content/scripts/walkies.app.js" ) );
         }
     }
 }

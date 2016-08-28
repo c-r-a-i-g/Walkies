@@ -1,8 +1,17 @@
-﻿@import (reference) "../../_themes/_default/_variables.less";
+﻿@import (reference) "../_shared/_variables.less";
+@import (reference) "../../_themes/_default/_variables.less";
 
 .mixin-navigation-label
 {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 400;
+}
+
+.bg-primary
+{
+    background: @theme-secondary;
+    background: -moz-linear-gradient(@theme-primary, @theme-secondary);
+    background: -webkit-linear-gradient(@theme-primary, @theme-secondary );
+    background: linear-gradient(@theme-primary, @theme-secondary);
 }

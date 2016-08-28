@@ -1,0 +1,38 @@
+﻿
+@{
+    var path = Request.Url.AbsolutePath;
+}
+
+@helper RenderMenuItem( string url, string title )
+{
+    var isActive = url.StartsWith( Request.Url.AbsolutePath ) && Request.Url.AbsolutePath != "/";
+    <li><a href="@url" class="page-scroll @If( isActive, "active" )">@title</a></li>
+}
+<nav class="header navbar navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand page-scroll">
+                <span class="glyphicon glyphicon-home"></span>
+                Walkies R Us
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                @RenderMenuItem( "/booking", "BOOK NOW" )
+                @RenderMenuItem( "/services", "Services" )
+                @RenderMenuItem( "/testimonials", "Testimonials" )
+                @RenderMenuItem( "/about", "About" )
+                @RenderMenuItem( "/contact", "Contact" )
+                @Html.Partial( "_Login" )
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+

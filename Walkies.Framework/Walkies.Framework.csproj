@@ -234,8 +234,12 @@
     <Compile Include="Models\Emails\AccountResetEmailModel.cs" />
     <Compile Include="Models\Emails\PasswordResetRequestEmailModel.cs" />
     <Compile Include="Models\Emails\WelcomeEmailModel.cs" />
+    <Compile Include="Models\Home\BookingModel.cs" />
+    <Compile Include="Models\Home\HomepageModel.cs" />
+    <Compile Include="Models\Home\TestimonialsModel.cs" />
+    <Compile Include="Models\Home\ServicesModel.cs" />
     <Compile Include="Models\Home\AboutModel.cs" />
-    <Compile Include="Models\Home\SupportModel.cs" />
+    <Compile Include="Models\Home\ContactModel.cs" />
     <Compile Include="Models\Modals\ChangePasswordModel.cs" />
     <Compile Include="Models\Modals\ResetAccountModel.cs" />
     <Compile Include="Models\Modals\SelectGeneralUserModel.cs" />
@@ -283,9 +287,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="LICENSE.md" />
     <None Include="packages.config" />
-    <None Include="readme.md" />
     <None Include="Views\Emails\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>

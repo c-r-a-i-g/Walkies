@@ -2,21 +2,17 @@
 @import (reference) "_shared/_variables.less";
 @import (reference) "../css/bootstrap/variables.less";
 
-html,body
+html,
+body 
 {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    width: 100%;
     height: 100%;
-    overflow: hidden;
-    font-family: "intro";
-    font-size: 16px;
+    width: 100%;
 }
 
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+body
+{
+    .serif-font;
+    webkit-tap-highlight-color: @gray-darker;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -25,16 +21,48 @@ body {
     padding-right: 15px;
 }
 
+.container
+{
+    max-width: 1200px;
+}
+
+.navbar-toggle .icon-bar
+{
+    background-color: black;
+}
+
+.vertical-center
+{
+    top: 50%;
+    transform: translateY( -50% );
+}
+
+.bg-primary
+{
+    .bg-primary;
+}
+
+
+@media (max-width: @screen-lg-min)
+{
+    .vertical-padding-small
+    {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
-.dl-horizontal dt {
+/*.dl-horizontal dt {
     white-space: normal;
-}
+}*/
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
+/*input,
 select,
 textarea {
     max-width: 280px;
-}
+}*/

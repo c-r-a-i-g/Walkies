@@ -1,44 +1,40 @@
-﻿<!DOCTYPE html>
+﻿@using Walkies.Framework.BaseClasses;
+
+@model PageModelBase
+
+@{ 
+    var pageModel = Model ?? new PageModelBase();
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/bundles/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <title>@pageModel.PageTitle - Walkies</title >
+    <link href='@(Request.Url.Scheme)://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600,700' rel='stylesheet' type='text/css'>
+    @Styles.Render("~/css")
 
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+<body id="page-top" class="@If( Request.Url.AbsolutePath != "/" , "affixed" )">
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Html.Partial( "Navigation" )
+    @RenderBody()
+
+    @Scripts.Render("~/scripts/jquery")
+    @Scripts.Render( "~/scripts/bootstrap" )
+    @Scripts.Render( "~/scripts/app" )
+
     @RenderSection("scripts", required: false)
+
+    <script>
+
+        $( function ()
+        {
+            var options = {};
+            _app = new walkies.app( options );
+        } );
+
+    </script>
+
 </body>
 </html>

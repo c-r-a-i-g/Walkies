@@ -1,0 +1,124 @@
+﻿@import (reference) "_shared/_mixins.less";
+@import (reference) "_shared/_variables.less";
+
+nav
+{
+    .sans-serif-font;
+    .transition-all;
+    .box-shadow( ~"0 3px 3px -2px rgba( 0, 0, 0, 0.05 )" );
+    .transition( background-color 222ms ease );
+
+    border-width: 0 !important; 
+    background-color: rgba( 255, 255, 255, 0.05 );
+
+    .navbar-header .navbar-brand
+    {
+        position: relative;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-width: 0;
+        text-indent: 36px;
+
+        .sans-serif-font;
+        .transition( background-color 222ms ease );
+
+        .glyphicon
+        {
+            background-color: @theme-primary;
+            padding: 14px 8px 0;
+            width: 36px;
+            height: 100%;
+            text-indent: 0;
+            color: white;
+            border-bottom-right-radius: 8px;
+
+            .absolute( 0, 0 );
+            .transition( background-color 222ms ease );
+
+            &:before
+            {
+                padding-top: 10px;
+            }
+
+        }
+
+        &:hover,
+        &:focus
+        {
+            color: darken( @theme-primary, 10%);
+            .glyphicon
+            {
+                background-color: darken( @theme-primary, 10%);
+            }
+        }
+
+        & a
+        {
+            color: white;
+            .transition( background-color 222ms ease );
+       }
+
+    }
+
+    .navbar-header .navbar-toggle
+    {
+        font-weight: 700;
+        font-size: 12px;
+        color: @gray-darker;
+        text-transform: uppercase;
+    }
+
+    .nav
+    {
+
+        li
+        {
+            & > a
+            {
+                &:hover,
+                &.active
+                {
+                    background-color: @theme-primary;
+                    color: white;
+                }
+            }
+
+            &:focus
+            {
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 13px;
+                color: @gray-darker;
+
+                &:hover
+                {
+                    background-color: @theme-primary;
+                    color: white;
+                }
+            }
+
+        }
+    }
+}
+
+body.affixed
+{
+    nav
+    {
+
+        background-color: white;
+        .box-shadow( 0 3px 3px -2px rgba( 0, 0, 0, 0.2 ) );
+
+        & a
+        {
+            color: @theme-primary;
+
+            .glyphicon
+            {
+                color: white !important;
+                border-bottom-right-radius: 0 !important;
+            }
+
+        }
+    }
+}

@@ -1,7 +1,12 @@
-﻿@{
-    ViewBag.Title = "About";
+﻿@using Walkies.Framework.Models.Home;
+
+@model AboutModel
+
+@{
+    Model.PageTitle = "About";
 }
-<h2>@ViewBag.Title.</h2>
+
+<h2>@Model.PageTitle</h2>
 <h3>@ViewBag.Message</h3>
 
 <p>Use this area to provide additional information.</p>

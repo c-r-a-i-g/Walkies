@@ -1,0 +1,32 @@
+﻿@import (reference) "_shared/_mixins.less";
+@import (reference) "_shared/_variables.less";
+@import (reference) "bootstrap/variables.less";
+
+.feature-map
+{
+    padding: 10px;
+    position: relative;
+    background-color: rgba( 255, 255, 255, 0.25 );
+    .border-radius( 5px, 5px, 5px, 5px );
+}
+
+@media (min-width: @screen-lg-min)
+{
+    .feature-map
+    {
+        margin-top: -120px;
+        margin-bottom: 30px;
+    }
+
+    .map-feature
+    {
+        h2
+        {
+            margin-top: -98px;
+            padding-top: 15px;
+            background-color: @theme-primary;
+            .border-radius( 10px, 0, 0, 10px );
+        }
+    }
+
+}
