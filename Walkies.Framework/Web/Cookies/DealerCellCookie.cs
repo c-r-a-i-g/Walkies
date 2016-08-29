@@ -27,7 +27,10 @@ namespace Walkies.Framework.Cookies
 
         #region Constructor & Intialisation
 
-        public WalkiesCookie() { }
+        public WalkiesCookie()
+        {
+            this.Breadcrumbs = new List<Breadcrumb>();
+        }
 
         #endregion
 

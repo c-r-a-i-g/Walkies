@@ -28,6 +28,29 @@ body {
   background: -webkit-linear-gradient(#00bbd6, #34dcb5);
   background: linear-gradient(#00bbd6, #34dcb5);
 }
+.pull-up-header {
+  margin-top: -86px;
+}
+.pull-up-header .section-heading {
+  display: inline-block;
+  background-color: white;
+  padding: 10px 35px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
 @media (max-width: 1440px) {
   .vertical-padding-small {
     padding-top: 30px;
@@ -108,8 +131,33 @@ aside {
     margin: 20px auto 0;
   }
 }
+.service-box img {
+  display: block;
+  margin-bottom: 15px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  width: 100%;
+  height: 200px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .service-box p {
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  text-align: justify;
 }
 .portfolio-box {
   position: relative;
