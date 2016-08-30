@@ -51,6 +51,28 @@ body {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
+.pull-bottom {
+  position: absolute;
+  bottom: 0;
+}
+.pull-bottom.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.no-padding {
+  padding: 0;
+}
+.row.equal-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.equal-height .row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
 @media (max-width: 1440px) {
   .vertical-padding-small {
     padding-top: 30px;
@@ -125,6 +147,7 @@ aside {
 .service-box {
   max-width: 400px;
   margin: 50px auto 0;
+  padding-bottom: 60px;
 }
 @media (min-width: 992px) {
   .service-box {
@@ -368,6 +391,9 @@ nav {
   border-width: 0 !important;
   background-color: rgba(255, 255, 255, 0.05);
 }
+nav a {
+  color: white;
+}
 nav .navbar-header .navbar-brand {
   position: relative;
   font-weight: 700;
@@ -503,7 +529,8 @@ body.affixed nav a .glyphicon {
 header {
   position: relative;
   width: 100%;
-  min-height: 90%;
+  min-height: 100%;
+  margin-bottom: -3px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -514,9 +541,6 @@ header {
   color: white;
 }
 header .hero-video {
-  -webkit-filter: brightness(0.7);
-  -moz-filter: brightness(0.7);
-  filter: brightness(0.7);
   position: absolute;
   top: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -532,6 +556,12 @@ header .header-content {
   text-align: center;
   padding: 100px 15px 100px;
   width: 100%;
+}
+header .header-content .header-content-inner {
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0, 87, 114, 0.55) 0%, rgba(0, 87, 114, 0.4) 40%, rgba(0, 87, 114, 0) 72%);
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 87, 114, 0.55) 0%, rgba(0, 87, 114, 0.4) 40%, rgba(0, 87, 114, 0) 72%);
+  background: radial-gradient(ellipse at center, rgba(0, 87, 114, 0.55) 0%, rgba(0, 87, 114, 0.4) 40%, rgba(0, 87, 114, 0) 72%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=1);
 }
 header .header-content .header-content-inner h1,
 header .header-content .header-content-inner p {
@@ -557,10 +587,6 @@ header .header-content .header-content-inner .btn-primary {
   font-size: 2em;
 }
 @media (min-width: 768px) {
-  header {
-    min-height: 90%;
-    margin-bottom: -3px;
-  }
   header .header-content {
     position: absolute;
     top: 50%;

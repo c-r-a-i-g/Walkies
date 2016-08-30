@@ -55,6 +55,38 @@ body
     }
 }
 
+.pull-bottom
+{
+    position: absolute;
+    bottom: 0;
+
+    &.center
+    {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.no-padding
+{
+    padding: 0;
+}
+
+.row.equal-height
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+
+    .row > [class*='col-'] 
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 @media (max-width: @screen-lg-min)
 {
     .vertical-padding-small
